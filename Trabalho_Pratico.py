@@ -1,3 +1,12 @@
+#Trabalho realizado por :
+
+#Alícia Silva – 30001928 
+#Maria dos Santos 20160732 
+#Pedro Lourenço – 20160718 
+#Ricardo Clemente-30000794
+
+
+
 import numpy as np
 import cv2
 from matplotlib import pyplot as plt
@@ -56,12 +65,13 @@ def make_train_data(vista,DIR):
         hog_image = hog.compute(res_2,winStride,padding,locations)
      
         
+        
+        #id_imagem.append(i)
         H.append(np.array(hog_image)) #imagens com o Hog Descriptor
-        id_imagem.append(i)
         O.append(np.array(res)) #imagem a cores 64x64       
         X.append(np.array(edges)) #imagem com o canny
         
-        W.append(str(label)) #da a label da vista
+        W.append(str(label)) #labels das vistas de cada imagem
         i=i+1
         
      
